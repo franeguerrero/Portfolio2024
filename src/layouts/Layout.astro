@@ -1,50 +1,103 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <Header logo="/logo.svg" />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
 </html>
+
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  @import url("https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+  :root {
+    --background: #fafafa;
+    --black: #202020;
+    --primary: #5c3cc6;
+    --primary-highlight: #674cdc;
+    --accent: #45199b;
+
+    --ff: "Anek Latin", system-ui;
+    --ff-mono: "JetBrains Mono", monospace;
+    --fs-h1-hero: clamp(2.027rem, 3.7716vw + 1.0841rem, 5.61rem);
+    --fs-h1: clamp(2.027rem, 1.8821vw + 1.5565rem, 3.815rem);
+    --fs-h2: clamp(1.802rem, 1.3158vw + 1.4731rem, 3.052rem);
+    --fs-h3: clamp(1.602rem, 0.8832vw + 1.3812rem, 2.441rem);
+    --fs-h4: clamp(1.424rem, 0.5568vw + 1.2848rem, 1.953rem);
+    --fs-h5: clamp(1.266rem, 0.3126vw + 1.1878rem, 1.563rem);
+    --fs-h6: clamp(1.125rem, 0.1316vw + 1.0921rem, 1.25rem);
+    --fs-body: 1rem;
+    --fs-small: 0.8rem;
+  }
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    /* ---- Font size base 18px ----*/
+    font-size: 112.5%;
+    overflow-x: hidden;
+  }
+  body {
+    font-family: var(--ff);
+    font-size: var(--fs-body);
+    color: var(--black);
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: var(--fs-h1);
+  }
+  h2 {
+    font-size: var(--fs-h2);
+  }
+  h3 {
+    font-size: var(--fs-h3);
+  }
+  h4 {
+    font-size: var(--fs-h4);
+  }
+  h5 {
+    font-size: var(--fs-h5);
+  }
+  h6 {
+    font-size: var(--fs-h6);
+  }
+  main {
+    width: 100%;
+  }
+  section {
+    margin: 4rem 0;
+  }
 </style>

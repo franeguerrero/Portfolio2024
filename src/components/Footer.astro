@@ -1,0 +1,124 @@
+---
+import { Image } from "astro:assets";
+import logo from "@icons/logowhite.svg";
+import phone from "@icons/phone.svg";
+import mail from "@icons/mail.svg";
+---
+
+<footer>
+  <div class="spacer wave-top"></div>
+  <div class="content">
+    <div class="social">
+      <a href="https://wa.me/5492267469421" target="_blank">
+        <Image src={phone} alt="Teléfono" />
+        +54 9 2267469421
+      </a>
+      <a href="mailto:franeguerrero@gmail.com" target="_blank">
+        <Image src={mail} alt="Correo electrónico" />
+        franeguerrero@gmail.com
+      </a>
+    </div>
+    <p>
+      <Image src={logo} alt="Logo" class="logo" />© 2024 Francisco Guerrero.
+      Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<style scoped>
+  footer {
+    margin-top: 5rem;
+  }
+  .content {
+    background-color: var(--accent);
+    margin: auto;
+    max-width: 75rem;
+    padding: 3rem 1rem;
+    color: var(--background);
+    box-sizing: content-box;
+    border-left: calc((100vw - 75rem) / 2) solid var(--accent);
+    border-right: calc((100vw - 75rem) / 2) solid var(--accent);
+    outline: 5px solid var(--accent);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    text-align: center;
+  }
+  p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    gap: 0.5rem;
+    text-wrap: balance;
+  }
+  img {
+    height: 1.5rem;
+    width: fit-content;
+  }
+  a {
+    display: flex;
+    flex-direction: row;
+    color: var(--background);
+    text-decoration: none;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .social {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .spacer {
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .wave-top {
+    background-image: url("src/assets/wave-top.svg");
+  }
+  @media (max-width: 480px) {
+    .spacer {
+      aspect-ratio: 960 / 300;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    .spacer {
+      aspect-ratio: 960 / 250;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .spacer {
+      aspect-ratio: 960 / 200;
+    }
+  }
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    .spacer {
+      aspect-ratio: 960 / 150;
+    }
+  }
+  @media (min-width: 1367px) {
+    .spacer {
+      aspect-ratio: 960 / 100;
+    }
+  }
+
+  @media (max-width: 75rem) {
+    .content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 30rem) {
+    .social {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

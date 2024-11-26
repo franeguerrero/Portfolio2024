@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+
+import SpacerSection from "@layouts/SpacerSection.astro";
+import projects from "@data/projects.json";
+import figmaIcon from "@icons/figma.svg";
+import githubIcon from "@icons/github.svg";
+---
+
+<SpacerSection>
+  <h2>Mis proyectos</h2>
+  {
+    projects.map((project, index) => (
+      <article class={index % 2 === 1 ? "reverse" : ""}>
+        <img
+          src={project.imagen}
+          alt={`Proyecto ${project.titulo}`}
+          loading="lazy"
+        />
+        <div class="content">
+          <h3>{project.titulo}</h3>
+          <p>{project.descripcion}</p>
+          <div class="links">
+            {project.figma && (
+              <a href={project.figma} target="_blank" class="figma">
+                <Image src={figmaIcon} alt="Logo Figma" />
+                Ver en Figma
+              </a>
+            )}
+            {project.github && (
+              <a href={project.github} target="_blank" class="github">
+                <Image src={githubIcon} alt="Logo GitHub" />
+                Ver en GitHub
+              </a>
+            )}
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</SpacerSection>
+
+<style scoped>
+  img {
+    max-width: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  article:last-child {
+    flex-direction: row-reverse;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+  .links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .figma {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: var(--background);
+    color: var(--black);
+    font-weight: 700;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: 100ms ease-in-out;
+    text-wrap: nowrap;
+  }
+  .figma img {
+    height: 2rem;
+    width: fit-content;
+  }
+  .figma:hover {
+    scale: 1.02;
+  }
+  .github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    background-color: var(--black);
+    color: var(--background);
+    font-weight: 700;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: 100ms ease-in-out;
+    text-wrap: nowrap;
+  }
+  .github img {
+    height: 2rem;
+    width: fit-content;
+  }
+  .github:hover {
+    scale: 1.02;
+  }
+
+  @media (max-width: 75rem) {
+    article {
+      flex-direction: column;
+    }
+    article:last-child {
+      flex-direction: column;
+    }
+    .links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

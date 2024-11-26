@@ -1,0 +1,67 @@
+---
+
+---
+
+<section>
+  <div class="spacer wave-top"></div>
+  <div class="content">
+    <slot />
+  </div>
+  <div class="spacer wave-bottom"></div>
+</section>
+
+<style>
+  .content {
+    background-color: var(--accent);
+    margin: auto;
+    max-width: 75rem;
+    padding: 1rem;
+    color: var(--background);
+    box-sizing: content-box;
+    border-left: calc((100vw - 75rem) / 2) solid var(--accent);
+    border-right: calc((100vw - 75rem) / 2) solid var(--accent);
+    outline: 5px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .spacer {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .wave-top {
+    background-image: url("src/assets/wave-top.svg");
+  }
+  .wave-bottom {
+    background-image: url("src/assets/wave-bottom.svg");
+  }
+  @media (max-width: 480px) {
+    .spacer {
+      aspect-ratio: 960 / 300;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    .spacer {
+      aspect-ratio: 960 / 250;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .spacer {
+      aspect-ratio: 960 / 200;
+    }
+  }
+  @media (min-width: 1025px) and (max-width: 1366px) {
+    .spacer {
+      aspect-ratio: 960 / 150;
+    }
+  }
+  @media (min-width: 1367px) {
+    .spacer {
+      aspect-ratio: 960 / 100;
+    }
+  }
+</style>

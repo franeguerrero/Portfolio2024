@@ -1,0 +1,42 @@
+---
+import skills from "@data/skills.json";
+---
+
+<section>
+  <h2>Mi stack</h2>
+  <div class="container">
+    {
+      skills.map((skill) => (
+        <article>
+          <img loading="lazy" src={skill.imagen} alt={`${skill.nombre} logo`} />
+          <h6>{skill.nombre}</h6>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style scoped>
+  section {
+    margin: auto;
+    max-width: 75rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    width: 100%;
+    gap: 3rem;
+  }
+</style>
