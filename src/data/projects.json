@@ -1,14 +1,14 @@
 [
   {
     "titulo": "Mariana Guerrero",
-    "imagen": "src/assets/proyecto1.webp",
+    "imagen": "@assets/proyecto1.webp",
     "descripcion": "Desarrollé el diseño y frontend de una galería de arte utilizando Figma y Astro, asegurando una experiencia visual atractiva y completamente responsiva. Pude crear una interfaz que se adaptaba a diversos dispositivos, manteniendo la calidad estética y funcional en pantallas de diferentes tamaños. Para la gestión de contenido, utilicé Strapi, aunque el proyecto fue interrumpido debido a problemas técnicos en el deploy del CMS, y se decidió seguir con otro enfoque. A pesar de los desafíos, este proyecto me permitió profundizar en el diseño responsivo y en la implementación de soluciones modernas de desarrollo web.",
     "figma": "https://www.figma.com/design/mL3Hzs2n3i7tf8tfCe8S8u/Portfolio?node-id=1-3&t=EwoVZDx5zkowwqe3-1",
     "github": "https://github.com/adminEGArt/marianaguerrero-front"
   },
   {
     "titulo": "Hugo Gassioles",
-    "imagen": "src/assets/proyecto2.webp",
+    "imagen": "@assets/proyecto2.webp",
     "descripcion": "Actualmente, estoy desarrollando el diseño para un nuevo proyecto web, siguiendo un enfoque similar al anterior, pero con un estilo visual más 'criollo' y adaptado a las necesidades específicas del cliente. Estoy en la fase inicial, enfocándome en crear una interfaz responsiva que mantenga la calidad en dispositivos de todos los tamaños. La implementación está prevista con Astro para optimizar la estructura del frontend, mientras que para la gestión del contenido integraré Strapi, esta vez con un mejor entendimiento del deploy, lo que permitirá una administración flexible y eficiente del contenido. Además, en este proyecto seré el encargado de redactar todo el contenido.",
     "figma": "https://www.figma.com/design/mL3Hzs2n3i7tf8tfCe8S8u/Portfolio?node-id=79-2&t=EwoVZDx5zkowwqe3-1"
   }
