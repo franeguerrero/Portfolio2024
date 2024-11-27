@@ -1,58 +1,58 @@
 [
   {
     "nombre": "Figma",
-    "imagen": "@icons/figma.svg"
+    "imagen": "/src/icons/figma.svg"
   },
   {
     "nombre": "Astro",
-    "imagen": "@icons/astro.svg"
+    "imagen": "/src/icons/astro.svg"
   },
   {
     "nombre": "Typescript",
-    "imagen": "@icons/typescript.svg"
+    "imagen": "/src/icons/typescript.svg"
   },
   {
     "nombre": "Javascript",
-    "imagen": "@icons/javascript.svg"
+    "imagen": "/src/icons/javascript.svg"
   },
   {
     "nombre": "CSS",
-    "imagen": "@icons/css.svg"
+    "imagen": "/src/icons/css.svg"
   },
   {
     "nombre": "HTML",
-    "imagen": "@icons/html.svg"
+    "imagen": "/src/icons/html.svg"
   },
   {
     "nombre": "Tailwind",
-    "imagen": "@icons/tailwind.svg"
+    "imagen": "/src/icons/tailwind.svg"
   },
   {
     "nombre": "React",
-    "imagen": "@icons/reactjs.svg"
+    "imagen": "/src/icons/reactjs.svg"
   },
   {
     "nombre": "Git",
-    "imagen": "@icons/git.svg"
+    "imagen": "/src/icons/git.svg"
   },
   {
     "nombre": "NodeJS",
-    "imagen": "@icons/nodejs.svg"
+    "imagen": "/src/icons/nodejs.svg"
   },
   {
     "nombre": "NestJS",
-    "imagen": "@icons/nestjs.svg"
+    "imagen": "/src/icons/nestjs.svg"
   },
   {
     "nombre": "PostgreSQL",
-    "imagen": "@icons/postgresql.svg"
+    "imagen": "/src/icons/postgresql.svg"
   },
   {
     "nombre": "MongoDB",
-    "imagen": "@icons/mongodb.svg"
+    "imagen": "/src/icons/mongodb.svg"
   },
   {
     "nombre": "Postman",
-    "imagen": "@icons/postman.svg"
+    "imagen": "/src/icons/postman.svg"
   }
 ]
