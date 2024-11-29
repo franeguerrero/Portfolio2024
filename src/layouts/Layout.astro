@@ -8,6 +8,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 
 import ViewTransitions from "astro/components/ViewTransitions.astro";
+import Analytics from "@vercel/analytics/astro";
 ---
 
 <!doctype html>
@@ -23,7 +24,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO Metadata -->
-    <meta property="og:title" content={title}/>
+    <meta property="og:title" content={title} />
     <meta
       property="og:description"
       content="Desarrollador frontend especializado en UX/UI. Diseño con Figma, desarrollo con Astro, React y Tailwind. Crea experiencias web atractivas y funcionales."
@@ -84,6 +85,7 @@ import ViewTransitions from "astro/components/ViewTransitions.astro";
       }
     </script>
     <ViewTransitions />
+    <Analytics />
   </head>
   <body>
     <Header logo="/logo.svg" />
