@@ -38,7 +38,7 @@ const skills = [
   <div class="container">
     {
       skills.map((skill) => (
-        <article>
+        <article tabindex="0">
           <Image
             loading="lazy"
             src={skill.imagen}
@@ -69,11 +69,34 @@ const skills = [
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    position: relative;
   }
   img {
     height: auto;
     width: auto;
+    padding-bottom: 2.5rem;
+    transition: transform 0.5s ease;
   }
+  h6 {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    position: absolute;
+    bottom: 0;
+  }
+
+  article:hover img,
+  article:focus img {
+    transform: scale(1.15);
+  }
+  article:hover h6,
+  article:focus h6 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
